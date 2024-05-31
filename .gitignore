@@ -1,0 +1,14 @@
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+
+# node
+node_modules
+
+# lockfile
+package-lock.json
+yarn.lock
+
+
