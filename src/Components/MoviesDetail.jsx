@@ -189,7 +189,7 @@ function MoviesDetail() {
               key={person.id}
             >
               <img
-                className="h-24 w-24 object-cover rounded-full"
+                className="h-24 w-24 object-cover rounded-md"
                 src={`https://image.tmdb.org/t/p/w500${person.profile_path}`}
                 alt={person.name}
               />
