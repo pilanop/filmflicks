@@ -1,5 +1,5 @@
-import { useContext } from 'react';
-import { FavoriteContext } from './FavoriteContext';
+import { useContext } from "react";
+import { FavoriteContext } from "./FavoriteContext";
 import { Link } from "react-router-dom";
 
 function FavouritePage() {
@@ -9,7 +9,9 @@ function FavouritePage() {
 
   return (
     <div>
-      <h1 className='text-white font-serif font-bold text-4xl text-center mt-11'>Favorite Movies</h1>
+      <h1 className="text-white font-serif font-bold text-4xl text-center mt-11">
+        Favorite Movies
+      </h1>
       <div className="grid grid-cols-4 gap-6 p-4 m-4">
         {favorites.map((movie) => (
           <div
@@ -19,10 +21,12 @@ function FavouritePage() {
             <Link to={`/Movies/${movie.id}`} className="flex flex-col h-full">
               <img
                 className="h-[20rem] w-full rounded-lg object-cover transition-transform duration-300 transform hover:scale-105"
-                src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
+                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
               />
               <div className="flex flex-col justify-between flex-grow mt-4">
-                <h3 className="text-white text-lg font-semibold">{movie.title}</h3>
+                <h3 className="text-white text-lg font-semibold">
+                  {movie.title}
+                </h3>
                 <div className="mt-2">
                   <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors duration-200">
                     See Details
@@ -52,4 +56,4 @@ function FavouritePage() {
   );
 }
 
-export default FavouritePage
+export default FavouritePage;
